@@ -12,7 +12,10 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name='posts')
     tags = models.ManyToManyField(Tag)
     price = models.DecimalField(max_digits=10, decimal_places=2)
+<<<<<<< Updated upstream
     image = models.ImageField(upload_to='posts/images/')
+=======
+>>>>>>> Stashed changes
 
     def __str__(self):
         return self.title
