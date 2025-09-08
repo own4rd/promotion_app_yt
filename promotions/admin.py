@@ -3,6 +3,11 @@ from .models.post import Post
 from .models.tag import Tag
 from .models.category import Category
 
-admin.site.register(Post)
+
+class PostAdmin(admin.ModelAdmin):
+  prepopulated_fields = {"slug": ("title",)}
+  
+admin.site.register(Post, PostAdmin)
+
 admin.site.register(Tag)
 admin.site.register(Category)

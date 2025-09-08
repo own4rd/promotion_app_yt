@@ -56,8 +56,8 @@
                                 <p>{{ promotion.subtitle }}</p>
                                 <h6 class="card-subtitle mb-2 text-body-secondary">{{ promotion.price }} R$</h6>
                                 <p class="card-text">{{ promotion.content }}</p>
-                                <a href="#" class="card-link">Ver Detalhes</a>
-                                <a href="#" class="card-link">Ir para</a>
+                                <a href="{% url 'promotions:detail_promotion' promotion.slug %}" class="card-link">Ver Detalhes</a>
+                                <a href="{{ promotion.link }}" target="_blank" class="card-link">Ir para</a>
                             </div>
                         </div>
                     </div>

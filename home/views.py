@@ -7,3 +7,4 @@ def home_view(request):
         'promotions': posts
     }
     return render(request, 'home/index.html', context)
+
